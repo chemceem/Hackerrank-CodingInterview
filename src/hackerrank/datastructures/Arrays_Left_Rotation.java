@@ -18,7 +18,11 @@ public class Arrays_Left_Rotation
 
         int newArray[] = new int[n];
         for(int j=0; j<n ; j++){
-            newArray[j] = a[(d+j)%n];
+            if(d+j < n) {
+                newArray[j] = a[d+j];
+            } else {
+                newArray[j] = a[(d+j)-n];
+            }
         }
 
         for(int i=0; i<n; i++) {
