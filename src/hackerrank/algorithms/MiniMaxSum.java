@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+/**
+ * Solution for https://www.hackerrank.com/challenges/mini-max-sum/problem
+ */
 public class MiniMaxSum {
 
     public static void main(String args[]){
