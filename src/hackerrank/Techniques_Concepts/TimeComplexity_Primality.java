@@ -1,4 +1,4 @@
-package hackerrank.algorithms;
+package hackerrank.Techniques_Concepts;
 
 import java.util.Scanner;
 
