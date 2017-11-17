@@ -15,22 +15,24 @@ public class Recursion_Davis_Staircase {
         int s = in.nextInt();
         for(int a0 = 0; a0 < s; a0++){
             int n = in.nextInt();
-            System.out.println(staircase(n));
+            System.out.println(climb(n));
         }
 
         in.close();
     }
 
-    private static int staircase(int n) {
-        if (n < 0) {
+    private static int climb(int n) {
+        if(n < 0)
             return 0;
+
+        if(n == 0)
+            return 1;
+
+        if(!steps.containsKey(n)) {
+            int count = climb(n-1) + climb(n-2) + climb(n-3);
+            steps.put(n, count);
         }
-        if (steps.containsKey(n)) {
-            return steps.get(n);
-        }
-        int ways = staircase(n - 1) + staircase(n - 2) + staircase(n - 3);
-        steps.put(n, ways);
-        return ways;
+        return steps.get(n);
     }
 
 }
